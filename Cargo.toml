@@ -12,6 +12,6 @@ krilla = "0.7"
 krilla-svg = "0.7"
 svg2pdf = "0.13"
 pdf-writer = "0.14"
-printpdf = { version = "0.9", features = ["svg"] }
+printpdf = { version = "0.12", features = ["svg"] }
 usvg = "0.45"
 fontdb = "0.23"

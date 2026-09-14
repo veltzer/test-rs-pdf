@@ -31,7 +31,7 @@ fn main() {
     rows.push(run("krilla small/fs1", || bake_krilla(&input, &out_dir, &fontdb_small, "small_fs1", 1.0)));
     rows.push(run("svg2pdf (all fonts)", || bake_svg2pdf(&input, &out_dir, &fontdb, "all")));
     rows.push(run("svg2pdf (empty db)", || bake_svg2pdf(&input, &out_dir, &fontdb_empty, "empty")));
-    rows.push(run("printpdf-0.9", || bake_printpdf(&input, &out_dir)));
+    rows.push(run("printpdf-0.12", || bake_printpdf(&input, &out_dir)));
     rows.push(run("rsvg-convert", || bake_rsvg(&input, &out_dir)));
     rows.push(run("marp", || bake_marp(&input, &out_dir)));
     rows.push(run("chrome-headless", || bake_chrome(&input, &out_dir)));
@@ -159,7 +159,7 @@ fn bake_svg2pdf(
     Ok(out)
 }
 
-// ── printpdf 0.9 ──────────────────────────────────────────────────────────
+// ── printpdf 0.12 ──────────────────────────────────────────────────────────
 fn bake_printpdf(input: &Path, out_dir: &Path) -> Result<PathBuf, String> {
     use printpdf::{
         Mm, Op, PdfDocument, PdfPage, PdfSaveOptions, Pt, Svg, XObjectTransform,
